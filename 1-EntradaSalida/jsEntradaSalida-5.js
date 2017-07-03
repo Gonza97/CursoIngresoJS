@@ -4,11 +4,9 @@ function Mostar()
 {
     var nombre  = document.getElementById("elNombre").value;
     var edad = document.getElementById("laEdad").value;
-    var msj1 = ("Usted se llama");
-    var msj2 = ("y tiene");
-    var msj3 = ("años");
-    var msjt = msj1.concat(nombre) + " " + msj2.concat(edad) + " " + ("años");
-    alert(msjt);
+    var texto = "Usted se llama " + nombre + " y tiene " + edad + " años";
+    alert(texto);
+    
 
     
    
