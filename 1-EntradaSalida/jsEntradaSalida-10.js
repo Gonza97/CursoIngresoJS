@@ -5,7 +5,7 @@ en el cuadro de texto "RESULTADO"*/
 function MostrarAumento()
 {
     var Import= document.getElementById("importe").value;
-    var res= parseInt(Import) % parseInt(25);
+    var res= parseInt(Import) * 0.75;
     document.getElementById("resultado").value= res;
 
 	
