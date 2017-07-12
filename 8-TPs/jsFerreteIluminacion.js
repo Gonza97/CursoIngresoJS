@@ -10,58 +10,54 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-      var precio=35;
-    var cant;
-    var marcas;
- 
+    var marcas= document.getElementById("Marca").value;
+    var precio= parseInt(35);
+    var cant= document.getElementById("Cantidad").value;
+    var res
     if(cant>=6)
     {
-     precio=35*0.50;
+        cant= parseInt(cant);
+        res= (cant * precio) *0.50;      
+        document.getElementById("precioDescuento").value= res;
     }
-    else if(cant==5)
-     {
-         if(marcas=="argentinaluz")
-         {
-             precio=35*0.60;
-         }
-         else
-         {
-             precio=35*0.70;
-         }
-     }
-     if(cant==4)
-     {
-         if(marcas=="ArgentinaLuz"||"FelipeLamparas")
-         {
-             precio=35*0.75;
-         }
-         else
-         {
-             precio=35*0.80;
-         }
-     }
-     if(cant==3)
-      {
-          if(marcas=="ArgentinaLuz")
-           {
-               precio=35*0.85;
-           }
-          else if(marcas=="FelipeLamparas")
-            {
-                precio==35*0.90;
-            }
-          else
-          {
-              precio=35*0.95;
-          }
- 
-        }  
-     if(cant<3)
-     {
-        precio=35
-     }
-    
+   else if(cant==5 && marcas=="ArgentinaLuz")
+   {
+       res= (cant * precio) * 0.40;
+       document.getElementById("precioDescuento").value= res;
+   }
+   else if(cant==4 && marcas=="ArgentinaLuz" && marcas=="FelipeLamparas")
+   {
+       res= (cant * precio) * 0.25;
+       document.getElementById("precioDescuento").value= res;
+   }
+   else if(cant==4)
+   {
+       res= (cant * precio) * 0.20;
+    document.getElementById("precioDescuento").value= res;
+   }
+   else if(cant==3 && marcas=="ArgentinaLuz")
+   {
+       res= (cant * precio) * 0.15;
+   }
+   else if(cant==3 && marcas=="FelipeLamparas")
+   {
+       res= (cant * precio) * 0.10;
+       document.getElementById("precioDescuento").value= res;      
+   }
+   else if(cant==3)
+   {
+       res= (cant * precio) * 0.05;
+       document.getElementById("precioDescuento").value= res;
+   }
+   if("")
 
+
+
+
+       
+   
     
+   
+
 
 }
