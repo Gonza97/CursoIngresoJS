@@ -14,20 +14,17 @@ function Mostrar()
 	while(contador < 6)
 	{
 		nota = prompt("Ingrese una nota");
-		sexo = prompt("Ingrese su sexo");
 		nota = parseInt(nota);
-		contador ++;
 		
 			while(nota>10 || nota<0)
 			{
 				nota = prompt("Ingrese una nota valida");
-				nota = parseInt(nota);
-				contador--;
+				nota = parseInt(nota);				
 			}
+			sexo = prompt("Ingrese el sexo: ");
 			while(!(sexo=="f" || sexo=="m"))
 			{
-				sexo = prompt("Ingrese su sexo");
-				contador--;
+				sexo = prompt("Ingrese su sexo");				
 			}
 			if(contador==1)
 			{
@@ -47,6 +44,7 @@ function Mostrar()
 				cantvarones++;
 			}
 			suma = suma + nota;
+			contador ++;
 			
 		
 	}
